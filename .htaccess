@@ -1,0 +1,7 @@
+DirectoryIndex the.app
+Options +ExecCGI
+AddHandler cgi-script .app
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule   ^(.*)$  the.app/$1 [L]
